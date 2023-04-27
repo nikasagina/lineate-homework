@@ -1,7 +1,7 @@
 public class SimpleMortgageCalculator implements MortgageCalculator {
-    private final int principal;
-    private final float annualInterest;
-    private final byte years;
+    private int principal;
+    private float annualInterest;
+    private byte years;
 
     public SimpleMortgageCalculator(int principal, float annualInterest, byte years) {
         this.principal = principal;
@@ -31,6 +31,26 @@ public class SimpleMortgageCalculator implements MortgageCalculator {
 
     @Override
     public byte getYears(){
-        return this.years;
+        return years;
+    }
+
+    public int getPrincipal() {
+        return principal;
+    }
+
+    public float getAnnualInterest() {
+        return annualInterest;
+    }
+
+    public void setPrincipal(int principal) {
+        this.principal = principal;
+    }
+
+    public void setAnnualInterest(float annualInterest) {
+        this.annualInterest = annualInterest;
+    }
+
+    public void setYears(byte years) {
+        this.years = years;
     }
 }
